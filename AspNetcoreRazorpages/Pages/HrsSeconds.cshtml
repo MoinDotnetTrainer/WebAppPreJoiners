@@ -1,0 +1,26 @@
+﻿@page
+@model AspNetcoreRazorpages.Pages.HrsSecondsModel
+@{
+}
+<form method="post">
+    <table>
+        <tr>
+            <th>
+                Hrs
+            </th>
+            <td>
+                <input type="text" id="hrs" name="hrs" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="submit" name="submit" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Seconds :   @TempData["res"]
+            </td>
+        </tr>
+    </table>
+</form>
