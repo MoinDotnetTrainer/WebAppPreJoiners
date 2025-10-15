@@ -1,0 +1,36 @@
+﻿@page
+@model AspNetcoreRazorpages.Pages.UserinfoModel
+@{
+}
+<form method="post">
+    <table>
+        <tr>
+            <th>UserName</th>
+            <td>
+                <input type="text" id="uname" name="uname" />
+            </td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>
+                <input type="email" id="email" name="email" />
+            </td>
+        </tr>
+        <tr>
+            <th>Dob</th>
+            <td>
+                <input type="date" id="dob" name="dob" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" name="submit" value="submit" />
+            </td>
+        </tr>
+    </table>
+    <p>
+        @TempData["Uname"]
+        @TempData["email"]
+        @TempData["dob"]
+    </p>
+</form>
