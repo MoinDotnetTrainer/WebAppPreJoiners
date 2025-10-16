@@ -1,0 +1,60 @@
+﻿@page
+@model AspNetcoreRazorpages.Pages.UsersListModel
+@{
+}
+
+<style>
+    /* site.css or inline */
+    .styled-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 1rem;
+        font-family: sans-serif;
+        min-width: 600px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .styled-table th, .styled-table td {
+            padding: 12px 15px;
+            border: 1px solid #dddddd;
+        }
+
+        .styled-table tbody tr:nth-child(even) {
+            background-color: #f3f3f3;
+        }
+
+        .styled-table tbody tr:hover {
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+
+</style>
+
+<table class="styled-table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+    </tr>
+        
+    </thead>
+
+    <tbody>
+    @foreach (var item in Model.usersDatas)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.Password</td>
+        </tr>
+    }
+    </tbody>
+
+</table>

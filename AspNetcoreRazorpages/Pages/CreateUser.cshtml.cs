@@ -17,14 +17,19 @@ namespace AspNetcoreRazorpages.Pages
         public void OnGet()
         {
         }
-        public void OnPost()
+        public IActionResult OnPost()
         {
             //get data here from UI , _values 
             if (_values != null)
             {
                 _db.UsersData.Add(_values);
                 _db.SaveChanges();
+                return RedirectToPage("UsersList");
 
+            }
+            else
+            {
+                return Page();
             }
         }
     }
