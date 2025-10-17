@@ -24,6 +24,7 @@ namespace AspNetcoreRazorpages.Pages
             {
                 _db.Books.Add(_books);
                 _db.SaveChanges();// commit the changes to DB
+                
             }
 
             // _books --> Data

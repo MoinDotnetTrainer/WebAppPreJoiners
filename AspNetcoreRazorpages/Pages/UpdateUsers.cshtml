@@ -1,0 +1,27 @@
+﻿@page
+@model AspNetcoreRazorpages.Pages.UpdateUsersModel
+@{
+}
+<form method="post">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td> <input type="text" asp-for="_Useradata.Name" />
+            <input type="hidden" asp-for="_Useradata.UserID" />   
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td> <input type="email" asp-for="_Useradata.Email" /></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>  <input type="password" asp-for="_Useradata.Password" /></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" name="submit" value="submit" />
+            </td>
+        </tr>
+    </table>
+</form>

@@ -42,6 +42,7 @@
         <th>Name</th>
         <th>Email</th>
         <th>Password</th>
+        <th>Action</th>
     </tr>
         
     </thead>
@@ -53,6 +54,9 @@
             <td>@item.Name</td>
             <td>@item.Email</td>
             <td>@item.Password</td>
+            <td>
+                    <a href="UpdateUsers?UserID=@item.UserID">Edit</a>
+            </td>
         </tr>
     }
     </tbody>
